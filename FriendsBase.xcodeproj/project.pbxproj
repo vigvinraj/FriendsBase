@@ -36,6 +36,7 @@
 		CE73B40E1D81D044005EBC4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE73B4101D81D044005EBC4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE73B4161D81D116005EBC4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE98853A1D83665A001FD220 /* FriendsBase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FriendsBase.entitlements; sourceTree = "<group>"; };
 		D1BAE5D1AC9E28E8F2AB1AB1 /* Pods-FriendsBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendsBase.release.xcconfig"; path = "Pods/Target Support Files/Pods-FriendsBase/Pods-FriendsBase.release.xcconfig"; sourceTree = "<group>"; };
 		E3B10E350535D3B241E52FBB /* Pods-FriendsBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendsBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendsBase/Pods-FriendsBase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +125,7 @@
 		CE73B4031D81D044005EBC4B /* FriendsBase */ = {
 			isa = PBXGroup;
 			children = (
+				CE98853A1D83665A001FD220 /* FriendsBase.entitlements */,
 				CE6F7C231D83362900D2096D /* Util */,
 				CE5331F61D81D53A00AF12BA /* Model */,
 				CE5331F71D81D54000AF12BA /* View */,
@@ -175,6 +177,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = UW7D9DM39Y;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -393,7 +400,12 @@
 			baseConfigurationReference = E3B10E350535D3B241E52FBB /* Pods-FriendsBase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FriendsBase/FriendsBase.entitlements;
 				DEVELOPMENT_TEAM = UW7D9DM39Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FriendsBase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vignesh.FriendsBase;
@@ -407,7 +419,12 @@
 			baseConfigurationReference = D1BAE5D1AC9E28E8F2AB1AB1 /* Pods-FriendsBase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FriendsBase/FriendsBase.entitlements;
 				DEVELOPMENT_TEAM = UW7D9DM39Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FriendsBase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vignesh.FriendsBase;
