@@ -20,6 +20,7 @@
 		CE73B40F1D81D044005EBC4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE73B40D1D81D044005EBC4B /* LaunchScreen.storyboard */; };
 		CE73B4171D81D116005EBC4B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE73B4161D81D116005EBC4B /* GoogleService-Info.plist */; };
 		CE78D0AA1D839CD700AB4C17 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78D0A91D839CD700AB4C17 /* FeedVC.swift */; };
+		CE8ED2AF1D88762A00CF9F92 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8ED2AE1D88762A00CF9F92 /* CircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		CE73B4101D81D044005EBC4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE73B4161D81D116005EBC4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE78D0A91D839CD700AB4C17 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		CE8ED2AE1D88762A00CF9F92 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		CE98853A1D83665A001FD220 /* FriendsBase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FriendsBase.entitlements; sourceTree = "<group>"; };
 		D1BAE5D1AC9E28E8F2AB1AB1 /* Pods-FriendsBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendsBase.release.xcconfig"; path = "Pods/Target Support Files/Pods-FriendsBase/Pods-FriendsBase.release.xcconfig"; sourceTree = "<group>"; };
 		E3B10E350535D3B241E52FBB /* Pods-FriendsBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendsBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendsBase/Pods-FriendsBase.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				CE6F7C271D8339C600D2096D /* RoundBtn.swift */,
 				CE6F7C291D83403E00D2096D /* DesignTxtField.swift */,
 				CE6F7C2B1D8341CD00D2096D /* DesignBtn.swift */,
+				CE8ED2AE1D88762A00CF9F92 /* CircleView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8ED2AF1D88762A00CF9F92 /* CircleView.swift in Sources */,
 				CE73B4071D81D044005EBC4B /* SignInVC.swift in Sources */,
 				CE6F7C281D8339C600D2096D /* RoundBtn.swift in Sources */,
 				CE73B4051D81D044005EBC4B /* AppDelegate.swift in Sources */,
