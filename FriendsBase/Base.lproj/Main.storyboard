@@ -152,11 +152,15 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wg4-GC-MD8">
                                         <frame key="frameInset" minX="3" minY="2" width="327" height="51"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="Jpy-uJ-8Ot" customClass="CircleView" customModule="FriendsBase" customModuleProvider="target">
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="Jpy-uJ-8Ot" customClass="CircleView" customModule="FriendsBase" customModuleProvider="target">
                                                 <color key="backgroundColor" red="0.32549019610000002" green="0.42745098040000001" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="55" id="yIj-9S-rYI"/>
+                                                    <constraint firstAttribute="width" constant="50" id="yIj-9S-rYI"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="VG6-pj-kjx" appends="YES" id="5Mn-2O-e22"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a Caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ov-gF-r6D" customClass="DesignTxtField" customModule="FriendsBase" customModuleProvider="target">
                                                 <nil key="textColor"/>
@@ -166,7 +170,7 @@
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQ2-U2-cyb" customClass="DesignBtn" customModule="FriendsBase" customModuleProvider="target">
                                                 <color key="backgroundColor" red="1" green="0.23921568630000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="55" id="fQ0-4k-aB5"/>
+                                                    <constraint firstAttribute="width" constant="50" id="fQ0-4k-aB5"/>
                                                 </constraints>
                                                 <state key="normal" image="add-post"/>
                                             </button>
@@ -349,6 +353,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addImage" destination="Jpy-uJ-8Ot" id="f0X-c9-eOf"/>
                         <outlet property="tableView" destination="i2w-r0-FTz" id="h3A-Ai-Vpt"/>
                     </connections>
                 </viewController>
@@ -356,6 +361,11 @@
                 <tapGestureRecognizer id="wfy-dH-tkT">
                     <connections>
                         <action selector="signOutTapped:" destination="HYR-bB-Nf7" id="fAK-oq-sUk"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="VG6-pj-kjx">
+                    <connections>
+                        <action selector="addImageTapped:" destination="HYR-bB-Nf7" id="8mz-nD-sS3"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

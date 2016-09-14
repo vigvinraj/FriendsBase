@@ -28,7 +28,6 @@ class PostCell: UITableViewCell {
         self.caption.text = post.caption
         self.likesLbl.text = "\(post.likes)"
         
-        
     }
 
     
