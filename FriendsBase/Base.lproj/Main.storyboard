@@ -253,7 +253,7 @@
                                                                         </stackView>
                                                                     </subviews>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="37" id="5KG-S8-Twz"/>
+                                                                        <constraint firstAttribute="width" constant="50" id="5KG-S8-Twz"/>
                                                                         <constraint firstAttribute="height" constant="44" id="tyG-AD-lgy"/>
                                                                     </constraints>
                                                                 </stackView>

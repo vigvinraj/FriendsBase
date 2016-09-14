@@ -23,7 +23,7 @@ class Post {
         return _imageUrl
     }
     
-    var lives:Int {
+    var likes:Int {
         return _likes
     }
     
