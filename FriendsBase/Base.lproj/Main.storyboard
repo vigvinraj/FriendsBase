@@ -73,6 +73,11 @@
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* Enter a Valid Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Op2-bl-E99">
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
+                                        <color key="textColor" red="0.96078431369999995" green="0.0" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GBU-Az-weT" userLabel="Password Field" customClass="DesignTxtField" customModule="FriendsBase" customModuleProvider="target">
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
@@ -102,7 +107,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="HQO-zG-LIK" firstAttribute="top" secondItem="fMg-F4-a7B" secondAttribute="bottom" constant="40" id="2eb-a3-koQ"/>
+                            <constraint firstItem="HQO-zG-LIK" firstAttribute="top" secondItem="fMg-F4-a7B" secondAttribute="bottom" constant="20" id="2eb-a3-koQ"/>
                             <constraint firstItem="qfI-6c-Qui" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2gt-mR-ZYc"/>
                             <constraint firstItem="HQO-zG-LIK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="4Ac-Je-ofC"/>
                             <constraint firstItem="cMI-OY-7Gl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5u5-ml-gCi"/>
@@ -120,6 +125,7 @@
                     </view>
                     <connections>
                         <outlet property="emailField" destination="YSA-zO-vHu" id="pnf-Q0-tcM"/>
+                        <outlet property="emailWarningLbl" destination="Op2-bl-E99" id="tMH-UD-dmP"/>
                         <outlet property="passwordField" destination="GBU-Az-weT" id="RbS-9n-4Um"/>
                         <outlet property="pwdWarningLbl" destination="Eiz-kU-gkc" id="ik7-Bq-m5Y"/>
                         <segue destination="HYR-bB-Nf7" kind="show" identifier="goToFeed" id="EQm-Dm-rVj"/>
@@ -214,12 +220,12 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="kU3-rq-Vuj"/>
-                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9mp-3O-Gcu">
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9mp-3O-Gcu">
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="E87-Lu-JGQ"/>
                                                                     </constraints>
-                                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                 </textView>
@@ -290,11 +296,15 @@
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uZj-Zn-Dpv" customClass="DesignView" customModule="FriendsBase" customModuleProvider="target">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signout" translatesAutoresizingMaskIntoConstraints="NO" id="q57-KN-XcH">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signout" translatesAutoresizingMaskIntoConstraints="NO" id="q57-KN-XcH">
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Xx4-AN-BYu"/>
                                             <constraint firstAttribute="height" constant="50" id="kbO-qU-uIK"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="wfy-dH-tkT" appends="YES" id="n8U-Xu-neg"/>
+                                        </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ov-NB-qjo">
                                         <constraints>
@@ -305,33 +315,22 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2g-ld-Hgb">
-                                        <connections>
-                                            <action selector="signOutTapped:" destination="HYR-bB-Nf7" eventType="touchUpInside" id="wdj-LP-WSK"/>
-                                        </connections>
-                                    </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="XIh-tK-6yO" customClass="CircleView" customModule="FriendsBase" customModuleProvider="target">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="NNs-d4-3O2"/>
-                                            <constraint firstAttribute="width" constant="50" id="gBi-D3-jL0"/>
+                                            <constraint firstAttribute="height" constant="40" id="NNs-d4-3O2"/>
+                                            <constraint firstAttribute="width" constant="40" id="gBi-D3-jL0"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.24705882352941178" green="0.31764705882352939" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="J2g-ld-Hgb" firstAttribute="centerY" secondItem="q57-KN-XcH" secondAttribute="centerY" id="0O6-T1-jnq"/>
-                                    <constraint firstItem="J2g-ld-Hgb" firstAttribute="top" secondItem="q57-KN-XcH" secondAttribute="top" id="4sG-OE-q8e"/>
                                     <constraint firstAttribute="trailing" secondItem="XIh-tK-6yO" secondAttribute="trailing" constant="8" id="GTC-kj-tED"/>
                                     <constraint firstAttribute="height" constant="65" id="Vcp-U8-ziX"/>
                                     <constraint firstItem="q57-KN-XcH" firstAttribute="centerY" secondItem="uZj-Zn-Dpv" secondAttribute="centerY" constant="8" id="Xzg-lU-6zc"/>
                                     <constraint firstItem="q57-KN-XcH" firstAttribute="leading" secondItem="uZj-Zn-Dpv" secondAttribute="leading" constant="8" id="YlX-I3-grM"/>
                                     <constraint firstItem="XIh-tK-6yO" firstAttribute="centerY" secondItem="1ov-NB-qjo" secondAttribute="centerY" id="ZIE-D3-UCm"/>
                                     <constraint firstItem="1ov-NB-qjo" firstAttribute="centerY" secondItem="q57-KN-XcH" secondAttribute="centerY" id="ZmV-tG-I4z"/>
-                                    <constraint firstItem="J2g-ld-Hgb" firstAttribute="centerX" secondItem="q57-KN-XcH" secondAttribute="centerX" id="bjU-sW-eCQ"/>
                                     <constraint firstItem="1ov-NB-qjo" firstAttribute="centerX" secondItem="uZj-Zn-Dpv" secondAttribute="centerX" id="dJ8-le-qZY"/>
-                                    <constraint firstItem="J2g-ld-Hgb" firstAttribute="trailing" secondItem="q57-KN-XcH" secondAttribute="trailing" id="e68-OR-N5C"/>
-                                    <constraint firstItem="J2g-ld-Hgb" firstAttribute="bottom" secondItem="q57-KN-XcH" secondAttribute="bottom" id="gV3-8f-o8f"/>
-                                    <constraint firstItem="J2g-ld-Hgb" firstAttribute="leading" secondItem="q57-KN-XcH" secondAttribute="leading" id="qEZ-kv-aEM"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -354,6 +353,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CiR-Uq-Own" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wfy-dH-tkT">
+                    <connections>
+                        <action selector="signOutTapped:" destination="HYR-bB-Nf7" id="fAK-oq-sUk"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1172" y="115.59220389805098"/>
         </scene>

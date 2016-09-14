@@ -22,6 +22,7 @@
 		CE78D0AA1D839CD700AB4C17 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78D0A91D839CD700AB4C17 /* FeedVC.swift */; };
 		CE8ED2AF1D88762A00CF9F92 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8ED2AE1D88762A00CF9F92 /* CircleView.swift */; };
 		CE8ED2B11D88921900CF9F92 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8ED2B01D88921900CF9F92 /* PostCell.swift */; };
+		CE8ED2B41D88C06000CF9F92 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8ED2B31D88C06000CF9F92 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		CE78D0A91D839CD700AB4C17 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		CE8ED2AE1D88762A00CF9F92 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		CE8ED2B01D88921900CF9F92 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		CE8ED2B31D88C06000CF9F92 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		CE98853A1D83665A001FD220 /* FriendsBase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FriendsBase.entitlements; sourceTree = "<group>"; };
 		D1BAE5D1AC9E28E8F2AB1AB1 /* Pods-FriendsBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendsBase.release.xcconfig"; path = "Pods/Target Support Files/Pods-FriendsBase/Pods-FriendsBase.release.xcconfig"; sourceTree = "<group>"; };
 		E3B10E350535D3B241E52FBB /* Pods-FriendsBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendsBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendsBase/Pods-FriendsBase.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				CE98853A1D83665A001FD220 /* FriendsBase.entitlements */,
+				CE8ED2B21D88C04600CF9F92 /* Services */,
 				CE6F7C231D83362900D2096D /* Util */,
 				CE5331F61D81D53A00AF12BA /* Model */,
 				CE5331F71D81D54000AF12BA /* View */,
@@ -147,6 +150,14 @@
 				CE73B4101D81D044005EBC4B /* Info.plist */,
 			);
 			path = FriendsBase;
+			sourceTree = "<group>";
+		};
+		CE8ED2B21D88C04600CF9F92 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE8ED2B31D88C06000CF9F92 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +296,7 @@
 				CE6F7C281D8339C600D2096D /* RoundBtn.swift in Sources */,
 				CE73B4051D81D044005EBC4B /* AppDelegate.swift in Sources */,
 				CE6F7C2A1D83403E00D2096D /* DesignTxtField.swift in Sources */,
+				CE8ED2B41D88C06000CF9F92 /* DataService.swift in Sources */,
 				CE78D0AA1D839CD700AB4C17 /* FeedVC.swift in Sources */,
 				CE6F7C221D8333B800D2096D /* DesignView.swift in Sources */,
 				CE6F7C261D83365100D2096D /* Constants.swift in Sources */,
