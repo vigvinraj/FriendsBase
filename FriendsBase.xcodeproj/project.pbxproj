@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		35F68CB91DBF7ABB21C29330 /* Pods_FriendsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E000D8C81D9F580D4C1E24 /* Pods_FriendsBase.framework */; };
+		CE69A4581D89BD9C0005D9D9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69A4571D89BD9C0005D9D9 /* Post.swift */; };
 		CE6F7C221D8333B800D2096D /* DesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F7C211D8333B800D2096D /* DesignView.swift */; };
 		CE6F7C261D83365100D2096D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F7C251D83365100D2096D /* Constants.swift */; };
 		CE6F7C281D8339C600D2096D /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F7C271D8339C600D2096D /* RoundBtn.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		94E000D8C81D9F580D4C1E24 /* Pods_FriendsBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FriendsBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE69A4571D89BD9C0005D9D9 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		CE6F7C211D8333B800D2096D /* DesignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignView.swift; sourceTree = "<group>"; };
 		CE6F7C251D83365100D2096D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE6F7C271D8339C600D2096D /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		CE5331F61D81D53A00AF12BA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE69A4571D89BD9C0005D9D9 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				CE8ED2AF1D88762A00CF9F92 /* CircleView.swift in Sources */,
 				CE73B4071D81D044005EBC4B /* SignInVC.swift in Sources */,
 				CE6F7C281D8339C600D2096D /* RoundBtn.swift in Sources */,
+				CE69A4581D89BD9C0005D9D9 /* Post.swift in Sources */,
 				CE73B4051D81D044005EBC4B /* AppDelegate.swift in Sources */,
 				CE6F7C2A1D83403E00D2096D /* DesignTxtField.swift in Sources */,
 				CE8ED2B41D88C06000CF9F92 /* DataService.swift in Sources */,
