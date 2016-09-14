@@ -55,7 +55,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let post = posts[indexPath.row]
         print("VIG: \(post.caption)")
         
-        let cell 
         
         return tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
     }
