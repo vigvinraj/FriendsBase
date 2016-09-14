@@ -80,11 +80,11 @@ class SignInVC: UIViewController {
                                 self.pwdWarningLbl.isHidden = false
                             }
                             if error.debugDescription.contains("email") == true || email.characters.count < 1 {
-                                self.emailWarningLbl.isHidden = false
+                    
                                 if error.debugDescription.contains("already in use") == true {
                                     self.emailWarningLbl.text = "* Email Already in Use"
-                                    self.emailWarningLbl.isHidden = false
                                 }
+                                self.emailWarningLbl.isHidden = false
                             }
 
                             print("Unable to Authenticate with Firebase using email - \(error)")
