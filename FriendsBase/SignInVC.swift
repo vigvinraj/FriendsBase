@@ -35,7 +35,7 @@ class SignInVC: UIViewController {
         
         let facebookLogin = FBSDKLoginManager()
         
-        facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
+        facebookLogin.logIn(withReadPermissions: ["email", "public_profile"], from: self) { (result, error) in
             if error != nil {
                 print("Unable to authenticate with Facebook - \(error)")
             }else if result?.isCancelled == true {
@@ -109,7 +109,13 @@ class SignInVC: UIViewController {
         DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         let keyChainResult = KeychainWrapper.defaultKeychainWrapper().setString(id, forKey: KEY_UID)
         print("Data saved to keychain \(keyChainResult)")
-        performSegue(withIdentifier: "goToFeed", sender: nil)
+        if let provider = userData["provider"] {
+            if provider == "facebook.com" {
+                performSegue(withIdentifier: "goToFeed", sender: nil)
+            } else {
+                performSegue(withIdentifier: "goToNewProfile", sender: nil)
+            }
+        }
     }
 
 }
